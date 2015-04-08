@@ -20,7 +20,7 @@ var GuestbookController = function($scope, $firebase, $http) {
 	};
 
 	// init the firebase connections
-	var fbaseItems = new Firebase( 'https://aubrey-tyler-wedding.firebaseio.com/guestbook' );
+	var fbaseItems = new Firebase( 'https://aubrey-tyler-dev.firebaseio.com/guestbook' );
 	$scope.fbContent = $firebase( fbaseItems );
 
 	$scope.addComment = function() {
