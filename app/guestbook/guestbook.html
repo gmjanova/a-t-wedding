@@ -1,0 +1,41 @@
+<section class="section guestbook">
+    
+   	<div class="top-image">
+   		<img src="img/proposal.jpg" alt="The Proposal" />
+   		<p class="caption">Lake George, NY</p>
+   		<p class="caption">Thanksgiving day, 2014</p>
+   	</div>
+   	<div class="comments-wrapper">
+   		<ul class="comments-list" ng-repeat="contentItem in fbContent">
+   			<li class="comment-item">
+   				<p class="comment-username">{{contentItem.username}}</p>
+   				<p class="comment-message">{{contentItem.message}}</p>
+   			</li>
+   		</ul>
+   		<a class="add-comment" ng-click="showMessageForm()" href="javascript:void(0);">Click here to write us a message!</a>
+   	</div>
+
+   	<modal-dialog show='contentModal.show' width='500px'>
+	    <div class="caption">
+	    	<p class="bold">Write anything!</p>
+	    	<p>Are you ready to dance?</p>
+	    	<p>Why is the sky blue?</p>
+	    	<p>How is my driving?</p>
+	    	<form class="add-comment-form" name="add-comment-form">
+	    		<div class="row">
+		    		<label for="post-username">Your Name</label>
+		    		<input id="post-username" ng-class="(form.username.error | iif : 'error' : '')" type="text" value="" ng-model="form.username.text" name="post-username" />
+		    	</div>
+		    	<div class="row">
+		    		<label for="post-message">Message</label>
+		    		<textarea id="post-message" ng-class="(form.message.error | iif : 'error' : '')" rows="4" value="" ng-model="form.message.text" name="post-message"></textarea>
+		    	</div>
+		    	<div class="row">
+		    		<label for="submit"></label>
+		    		<a href="javascript:void(0);" class="submit" ng-click="addComment()">{{form.saving | iif : 'Saving...' : 'Submit'}}</a>
+		    	</div>
+	    	</form>
+	    </div>
+  	</modal-dialog>
+
+</section>

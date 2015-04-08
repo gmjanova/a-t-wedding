@@ -1,0 +1,454 @@
+/*
+* Reset
+*/
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/*
+*	Fonts
+*/
+@font-face {
+    font-family: 'Tall Films Expanded';
+        src: url('../fonts/TallFilmsExpanded.eot');
+        src: url('../fonts/TallFilmsExpanded.eot?#iefix') format('embedded-opentype'),
+       		 url('../fonts/TallFilmsExpanded.woff') format('woff'), 
+        	 url('../fonts/TallFilmsExpanded.ttf') format('truetype'), 
+        	 url('../fonts/TallFilmsExpanded.svg') format('svg');
+}
+
+/*
+* Page
+*/ 
+body {
+	background-color: #dcdcdc;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+	.page-wrapper {
+		margin: 0 auto;
+		background-color: #fffff0;
+		width: 768px;
+		position: relative;
+		min-height: 100%;
+	}
+		.page-wrapper .audio-wrapper {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+			.page-wrapper .audio-wrapper .audiojs {
+				background: none repeat scroll 0 0 #fffff0;
+				box-shadow: none;
+				margin: 0 auto;
+				height: 42px;
+				width: 100%;
+				max-width: 768px;
+			}
+				.page-wrapper .audio-wrapper .audiojs .player-wrapper {
+					width: 310px;
+					margin: 0 auto;
+				}
+					.page-wrapper .audio-wrapper .audiojs .play-pause {
+						border: none;	
+					}
+						.page-wrapper .audio-wrapper .audiojs .play-pause .play {
+							background: url('../img/play_24.png');
+							height: 32px;
+							width: 32px;
+						}
+						.page-wrapper .audio-wrapper .audiojs .play-pause .pause {
+							background: url('../img/pause_24.png');
+							height: 32px;
+							width: 32px;
+						}
+
+					.page-wrapper .audio-wrapper .audiojs .scrubber {
+						display: none;
+					}
+
+					.page-wrapper .audio-wrapper .audiojs .track-name {
+						float: left;
+						display: inline-block;	
+						line-height: 40px;
+						font-family: 'Cardo', serif;
+						font-size: 14px;
+						margin: 0 6px;
+					}
+
+					.page-wrapper .audio-wrapper .audiojs .time {
+						display: none;
+					}
+	#bg-wrapper {
+	    display: block;
+	    position: fixed;
+	    bottom: 0px;
+	    left: 0px;
+	    z-index: -1;
+	    overflow: hidden;
+	}
+		#bg-wrapper img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	/*
+	*	Header
+	*/
+	header { }
+		header h1 {
+			font-family: 'Cardo', serif;
+			font-weight: 100;
+			font-size: 36px;
+			text-align: center;
+			padding: 20px 0 12px;
+		}
+		header .logo-wrapper {
+			width: 100%;
+			margin: 10px 0;
+		}
+			header .logo-wrapper .logo-img {
+				display: block; 
+				margin: 0 auto;
+			}
+		header nav ul.nav-list {
+			text-align: center;
+			margin: 0 auto 25px;
+		}
+			header nav ul.nav-list li.nav-item {
+			    display: inline-block;
+			    margin: 0 12px;
+			    text-transform: uppercase;
+			}
+				header nav ul.nav-list li.nav-item a {
+					font-family: 'Tall Films Expanded';
+					font-size: 24px;
+				    font-weight: 600;
+				    letter-spacing: 2px;
+					text-decoration: none;
+					text-transform: uppercase;
+					color: #000;
+				}
+
+				header nav ul.nav-list li.nav-item.selected {
+					border-bottom: 1px solid #000;
+				}
+
+	/*
+	*	Welcome page
+	*/
+	section.welcome {
+		width: 80%;
+		margin: 0 auto;
+		padding: 0 0 42px;
+	}
+		section.welcome p {
+			font-family: 'Cardo', serif;
+			font-size: 16px;
+			line-height: 20px;
+			text-align: center;
+		}
+		section.welcome .welcome-img {
+			display: block;
+			margin: 20px auto;
+			max-width: 515px;
+		}
+		/*section.welcome .audio-wrapper {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+			section.welcome .audio-wrapper .audiojs {
+				background: none repeat scroll 0 0 #fffff0;
+				box-shadow: none;
+				margin: 0 auto;
+				height: 42px;
+				width: 100%;
+				max-width: 768px;
+			}
+				section.welcome .audio-wrapper .audiojs .player-wrapper {
+					width: 310px;
+					margin: 0 auto;
+				}
+					section.welcome .audio-wrapper .audiojs .play-pause {
+						border: none;	
+					}
+						section.welcome .audio-wrapper .audiojs .play-pause .play {
+							background: url('../img/play_24.png');
+							height: 32px;
+							width: 32px;
+						}
+						section.welcome .audio-wrapper .audiojs .play-pause .pause {
+							background: url('../img/pause_24.png');
+							height: 32px;
+							width: 32px;
+						}
+
+					section.welcome .audio-wrapper .audiojs .scrubber {
+						display: none;
+					}
+
+					section.welcome .audio-wrapper .audiojs .track-name {
+						float: left;
+						display: inline-block;	
+						line-height: 40px;
+						font-family: 'Cardo', serif;
+						font-size: 14px;
+						margin: 0 6px;
+					}
+
+					section.welcome .audio-wrapper .audiojs .time {
+						display: none;
+					}*/
+
+	/*
+	*	Event Details page
+	*/
+	section.event {
+		width: 77%;
+		margin: 0 auto;
+		padding: 0 0 42px;
+	}
+		section.event .venue {
+			margin: 20px 0 30px;
+		}
+			section.event .venue .caption {
+				width: 50%;
+				float: left;
+			}
+				section.event .venue .caption h2 {
+					font-family: 'Tall Films Expanded';
+					font-size: 24px;
+				    font-weight: 600;
+				    letter-spacing: 2px;
+					text-decoration: none;
+					text-transform: uppercase;
+					color: #000;
+				}
+				section.event .venue .caption .venue-name {
+					font-family: 'Cardo', serif;
+					font-size: 18px;
+					font-style: italic;
+					line-height: 20px;
+					font-weight: 600;
+				}
+				section.event .venue .caption .address,
+				section.event .venue .caption a {
+					font-family: 'Cardo', serif;
+					font-size: 14px;
+					line-height: 20px;
+					font-weight: 600;
+				}
+				section.event .venue .caption a {
+					display: block;
+				}
+
+			section.event .venue .venue-img {
+				width: 50%;
+				display: inline-block;
+			}
+
+		section.event .bottom-caption {
+			margin: 20px 0 0;
+    		padding: 0 0 40px;
+    		font-family: 'Cardo', serif;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 600;
+		}
+
+	/*
+	*	Accommodations Page
+	*/
+	section.accommodations {
+		width: 77%;
+		margin: 0 auto;
+		padding: 0 0 42px;
+	}
+		section.accommodations .top-caption {
+			margin: 25px 0;
+    		font-family: 'Cardo', serif;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 600;
+		}
+		section.accommodations .venue {
+			margin: 20px 0 30px;
+		}
+			section.accommodations .venue .caption {
+				width: 45%;
+				padding-right: 5%;
+				float: left;
+			}
+				section.accommodations .venue .caption .venue-name {
+					font-family: 'Cardo', serif;
+					font-size: 18px;
+					font-style: italic;
+					line-height: 20px;
+					font-weight: 600;
+				}
+				section.accommodations .venue .caption .address,
+				section.accommodations .venue .caption a,
+				section.accommodations .venue .caption .room-block,
+				section.accommodations .venue .caption .venue-distance {
+					font-family: 'Cardo', serif;
+					font-size: 14px;
+					line-height: 20px;
+					font-weight: 600;
+				}
+				section.accommodations .venue .caption a {
+					display: block;
+				}
+				section.accommodations .venue .caption a.inline-link {
+					display: inline;
+				}
+
+			section.accommodations .venue .venue-img {
+				width: 50%;
+				display: inline-block;
+			}
+
+	/*
+	*	Registry Page
+	*/
+	section.registry {
+	    margin: 20% auto 0;
+	    text-align: center;
+	    width: 77%;
+	    font-style: italic;
+	}
+
+	/*
+	*	Guestbook page
+	*/
+	section.guestbook {
+	    margin: 0 auto;
+	    width: 77%;
+	    padding: 0 0 42px;
+	}
+		section.guestbook .top-image {
+		    width: 300px;
+		    margin: 0 auto 30px;
+		}
+			section.guestbook .top-image .caption {
+			    text-align: center;
+			    font-family: 'Cardo', serif;
+				font-size: 14px;
+				margin: 5px 0;
+				line-height: 20px;
+				font-style: italic;
+			}
+
+		section.guestbook .comments-wrapper {
+			padding-bottom: 40px;
+		}
+			section.guestbook .comments-wrapper a.add-comment {
+				border: 1px solid #000;
+			    display: block;
+			    font-family: "Cardo",serif;
+			    font-size: 18px;
+			    width: 250px;
+			    line-height: 20px;
+			    margin: 20px auto 0;
+			    padding: 20px;
+			    text-align: center;
+			    text-decoration: none;
+			    color: #000;
+			}
+			section.guestbook .comments-wrapper ul.comments-list {}
+				section.guestbook .comments-wrapper ul.comments-list li.comment-item p.comment-username {
+					width: 30%;
+					float: left;
+					font-family: 'Cardo', serif;
+					font-size: 18px;
+					font-style: italic;
+					line-height: 20px;
+					font-weight: 600;
+					padding-right: 2%;
+    				width: 23%;
+				}
+				section.guestbook .comments-wrapper ul.comments-list li.comment-item p.comment-message {
+					width: 70%;
+					font-family: 'Cardo', serif;
+					font-size: 18px;
+					line-height: 20px;
+					display: inline-block;
+				}
+
+		section.guestbook .ng-modal {}
+			section.guestbook .ng-modal .caption {
+				text-align: center;
+				font-family: 'Cardo', serif;
+				font-size: 18px;
+				line-height: 20px;
+			}
+				section.guestbook .ng-modal .caption p {
+					margin: 8px 0;
+					font-size: 14px;
+				}
+				section.guestbook .ng-modal .caption p.bold {
+					font-weight: 600;
+					font-size: 18px;
+				}
+
+			section.guestbook .ng-modal .add-comment-form {
+				margin: 15px 0;
+			}
+				section.guestbook .ng-modal .add-comment-form .row {
+					margin: 8px 0;
+				}
+					section.guestbook .ng-modal .add-comment-form .row label {
+						display: inline-block;
+						vertical-align: middle;
+					    padding-right: 1%;
+					    text-align: right;
+					    width: 21%;
+					}
+					section.guestbook .ng-modal .add-comment-form .row input,
+					section.guestbook .ng-modal .add-comment-form .row textarea {
+						width: 45%;
+						display: inline-block;
+						vertical-align: middle;
+						font-family: 'Cardo', serif;
+						font-size: 14px;
+						border: 1px solid #000;
+						padding: 5px;
+						background-color: #fff;
+					}
+					section.guestbook .ng-modal .add-comment-form .row input.error,
+					section.guestbook .ng-modal .add-comment-form .row textarea.error {
+						border: 1px solid #ee0000;
+					}
+					section.guestbook .ng-modal .add-comment-form .row a.submit {
+						width: 45%;
+						display: inline-block;
+						vertical-align: middle;
+						font-family: 'Cardo', serif;
+						font-size: 14px;
+						border: 1px solid #000;
+						padding: 5px 0;
+						background-color: #fff;
+						text-decoration: none;
+						color: #000;
+					}
